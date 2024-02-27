@@ -1,21 +1,15 @@
-import 'dart:convert';
-
 import 'package:desktop_multi_window/desktop_multi_window.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
   if (args.firstOrNull == 'multi_window') {
-    final windowId = int.parse(args[1]);
-    final argument = args[2].isEmpty
-        ? const {}
-        : jsonDecode(args[2]) as Map<String, dynamic>;
     runApp(MaterialApp(
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.dark,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Testing Rebuild Not Rendering'),
+          title: const Text('New Window'),
         ),
         body: NewWidget(),
       ),
